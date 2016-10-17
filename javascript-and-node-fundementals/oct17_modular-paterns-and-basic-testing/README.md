@@ -47,11 +47,16 @@
 * Own your repo
 * Unless explicitly mentioned otherwise, labs can be done collaboratively
 * Develop your development as a developer, holistically
+* Call out jargon
+* Ask to repeat, clarify, cover again...
 
 ## Course Overview
 * 10 week overview
 
-## 
+## CS concepts
+* Provide [models](https://en.wikipedia.org/wiki/All_models_are_wrong) for learning
+* Turtles on turtles all the way down...
+* Goal is contextual understanding
 
 ## This week in JavaScript...
 
@@ -94,11 +99,16 @@ Things we'll probably run into:
 ## Today's Learning Objectives
 * Setup and run JavaScript “app” using Node.js from command line
 	* `node --version` > 6
-	* (ES6 FTW!)
+	* Debug
 * Basic `node` architecture 101
+	* v8 + event-loop + os-lib
+	* Process - OS manage computation time
+	* Thread - actual "thread of execuation"
+	* Event loop explained
 * JavaScript single threaded event model
 * Logically organize and split code into modules (.js files) 
 using require and module.exports to share code between modules 
 (we'll cover import and export in second half of course) 
 * Use tests and assertions to validate and maintain correctness of code
-* Command line use of `mocha`: run, and watch (continuously run) tests 
+* Command line use of `mocha`: run, and watch (continuously run) tests
+* Heap v Stack Memory
