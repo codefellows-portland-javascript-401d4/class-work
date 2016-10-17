@@ -41,7 +41,7 @@
 * Make sure everyone has equally has opportunity to:
     * Speak, Ideate, and Lead
 
-## 401 Student Expectations:
+## More Expectations...
 * Evidence of Refactoring and Code Improvement
 * No cut-n-paste of other's code - Kinesthetic Learning
 * Own your repo, know lab process
@@ -111,7 +111,7 @@ Things we'll probably run into:
 	* Process - OS manage computation time
 	* Thread - actual "thread of execuation"
 	* Event loop explained
-* JavaScript single threaded event model
+	* JavaScript single threaded event model
 * Logically organize and split code into modules (.js files) 
 using require and module.exports to share code between modules 
 (we'll cover import and export in second half of course) 
