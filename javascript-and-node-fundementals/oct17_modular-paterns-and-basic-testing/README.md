@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Installing Node, Testing JavaScript
+![cf](http://i.imgur.com/7v5ASc8.png) Welcome to 401!
 ===
 
 ## Kickoff
@@ -7,7 +7,7 @@
     * Ready for hire at 1-2 years experience
 * Intros
     * My background
-    * You:
+    * Students & TA's:
         * name & your relationship with JavaScript
 * Facility information
     * News as we know on new space
@@ -49,6 +49,8 @@
 * Develop your development as a developer, holistically
 * Call out jargon
 * Ask to repeat, clarify, cover again...
+
+Questions?
 
 ## Course Overview
 * 10 week overview
