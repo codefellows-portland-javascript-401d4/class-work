@@ -13,7 +13,7 @@
     * News as we know on new space
 * Events, class study groups, other social... 
 
-## 401 Student Expectations Background:
+## Being a 401 Student...
 * Go beyond getting it to work...
 * Why is software development so hard?
     * known vs unknown problems
@@ -44,11 +44,15 @@
 ## 401 Student Expectations:
 * Evidence of Refactoring and Code Improvement
 * No cut-n-paste of other's code - Kinesthetic Learning
-* Own your repo
+* Own your repo, know lab process
 * Unless explicitly mentioned otherwise, labs can be done collaboratively
 * Develop your development as a developer, holistically
 * Call out jargon
 * Ask to repeat, clarify, cover again...
+* Be timely
+	* Class
+	* Labs
+	* Readings
 
 Questions?
 
