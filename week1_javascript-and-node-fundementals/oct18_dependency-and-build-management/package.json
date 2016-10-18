@@ -1,0 +1,23 @@
+{
+  "name": "oct18_dependency-and-build-management",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) Dependency and Build Management ===",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "npm run test:run",
+    "test:run": "mocha -R nyan",
+    "test:watch": "npm run test:run -- -w",
+    "lint": "eslint ."
+  },
+  "author": "@martypdx",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4"
+  }
+}
