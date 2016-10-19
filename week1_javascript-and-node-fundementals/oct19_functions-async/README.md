@@ -5,45 +5,8 @@
 
 ## In-class exercise
 
-Create a "standard" project:
-* GitHub repo
-* npm `package.json`
-* build scripts (`lint`, `test`, `watch`)
-* `.eslintrc`, `.gitignore`
-* `README.md`
-    * How to develop/run
-    * Contributor Guidelines
-    * LICENSE.md
-    * how to use (may be on github pages)
+https://github.com/codefellows-portland-javascript-401d4/fizz-buzz
 
-That's a tested fizz-buzz module:
-* takes an integer `n`
-* returns array of length `n` 
-    * numbers in sequence up to `n`
-    * divisible by 3? `fizz`
-    * divisible by 5? `buzz`
-    * both? `fizz buzz`
-* example test assertion:
-    ```
-    assert.deepEqual(fizzBuzz(16), [
-        1, 
-        2, 
-        'fizz',     // 3
-        4, 
-        'buzz',     // 5
-        'fizz',     // 6
-        7, 
-        8, 
-        'fizz',     // 9
-        'buzz',     // 10
-        11,
-        'fizz',     // 12
-        13,
-        14,
-        'fizzbuzz', // 15
-        16
-    ]);
-    ```
 ## Learning Objectives
 
 * Asynchronous programming using Node.js callback pattern
@@ -73,8 +36,8 @@ serialized representation and be able to move between the two formats by using:
 	* Propagate errors?
 * Node callback pattern `callback( err, result )`
 * Some hardfast rules:
-    * You can't create asynchronicity with just js
-    * If your building functionality ontop of asychronous API's, 
+    1. You can't create asynchronicity with just js
+    2. If your building functionality ontop of asychronous API's, 
     then your library must be asynchronous!
 * Demo
 	* Mocha `done`
@@ -88,6 +51,8 @@ serialized representation and be able to move between the two formats by using:
 	* Sequential
 	* Parallel
 		* Async order is "completion" based
+
+# moved to tomorrow
 * Binary Data
 	* What is meaning?
 	* Bits, Bytes, Words, DWords
