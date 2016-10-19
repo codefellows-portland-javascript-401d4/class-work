@@ -1,12 +1,20 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) Functions, Asynchronicity, File System (fs)
 
+## npm modules
+* anyone find something interesting?
+
 ## In-class exercise
 
 Create a "standard" project:
 * GitHub repo
-* npm package
-* build scripts (lint, test, watch)
-* .eslintrc, .gitignore
+* npm `package.json`
+* build scripts (`lint`, `test`, `watch`)
+* `.eslintrc`, `.gitignore`
+* `README.md`
+    * How to develop/run
+    * Contributor Guidelines
+    * LICENSE.md
+    * how to use (may be on github pages)
 
 That's a tested fizz-buzz module:
 * takes an integer `n`
@@ -35,7 +43,7 @@ That's a tested fizz-buzz module:
         'fizzbuzz', // 15
         16
     ]);
-
+    ```
 ## Learning Objectives
 
 * Asynchronous programming using Node.js callback pattern
@@ -53,13 +61,21 @@ serialized representation and be able to move between the two formats by using:
     * function definition
     * function expression
     * (named function)
-    * arrow function
+    * [arrows functions](https://github.com/martypdx/workshop-promises-fat-arrows/blob/master/fat-arrows.md)
 * [Three function passing patterns](https://github.com/martypdx/workshop-promises-fat-arrows/blob/master/async-js-patterns.md) 
+* Async pattern can use:
+    * callbacks
+    * promises
+    * async/await ([ES2017](https://github.com/tc39/proposals/blob/master/finished-proposals.md))
 * Review node event loop
 * How do we
 	* return values?
 	* Propagate errors?
 * Node callback pattern `callback( err, result )`
+* Some hardfast rules:
+    * You can't create asynchronicity with just js
+    * If your building functionality ontop of asychronous API's, 
+    then your library must be asynchronous!
 * Demo
 	* Mocha `done`
 		* test parameter
