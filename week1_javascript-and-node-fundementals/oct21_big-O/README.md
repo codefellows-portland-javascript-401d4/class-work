@@ -25,6 +25,8 @@
 * Whiteboards
     * have stations
     * ordering new whiteboards
+    * supplies
+        * close lid on wipes
 
 ## Learning Objectives
 
