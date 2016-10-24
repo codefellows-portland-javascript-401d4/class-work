@@ -14,7 +14,7 @@
             * long reads
 * visibility issues 
     1. stylus tablet in lieu of whiteboard
-    2. second screen
+    2. second screen?
 * more context
     * lectures
     * labs
@@ -24,6 +24,7 @@
 ## Misc
 * only PR *once* on github for pair/mob labs
 * everyone submits on canvas 
+* review async via file-store example
 
 ## Roadmap
 
