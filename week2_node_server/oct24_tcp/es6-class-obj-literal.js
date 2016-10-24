@@ -39,8 +39,10 @@ class PrivateChatRoom extends ChatRoom {
     }
 
     add() {
+        // custom behavior...
         // you can (but don't need to) access base class methods via:
         super.add();
+        // more custom behavior...
     }
 }
 
