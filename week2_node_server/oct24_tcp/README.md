@@ -3,11 +3,27 @@
 ## Weekly Survey
 **Any missing emails?**
 
+* (candid feedback will be filtered via Jordana)
+* Feeling overwhelmed
+    * Most students feel that way after week 1
+    * Summit is week 2/week 3 
+    * Volume of work
+        * Prioritize:
+            * labs
+            * contextual readings
+            * long reads
 * visibility issues 
     1. stylus tablet in lieu of whiteboard
     2. second screen
 * more context
-* more time to read code being presented 
+    * lectures
+    * labs
+* more time to read code being presented
+* groups/pairings
+
+## Misc
+* only PR *once* on github for pair/mob labs
+* everyone submits on canvas 
 
 ## Roadmap
 
