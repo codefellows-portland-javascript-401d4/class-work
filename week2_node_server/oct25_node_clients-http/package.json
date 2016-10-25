@@ -4,7 +4,7 @@
   "description": "![cf](http://i.imgur.com/7v5ASc8.png) Node Clients and Http ===",
   "main": "index.js",
   "directories": {
-    "test": "mocha"
+    "test": "test"
   },
   "dependencies": {
   },
@@ -13,7 +13,8 @@
     "mocha": "^3.1.2"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --debug-brk",
+    "watch": "mocha -w"
   },
   "author": "",
   "license": "ISC"
