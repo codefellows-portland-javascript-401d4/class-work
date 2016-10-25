@@ -58,3 +58,17 @@ Part 2 on both labs (`LAB2.md`):
 		* Content type, etc.
 	* Authorization tokens
 
+REST use cases:
+* `GET /todos` = return the list of todos (Read)
+* `GET /todos/:id` (example: `/todos/123`) = return specific todo,
+often used for a detail view (Read)
+* `POST /todos` = create a new todo (and return object with id) (Create)
+* `PUT /todos/:id` = create or replace todo with this specific id (Update)
+* `PATCH /todos/:id` = update the supplied properties on the todo with specific id (Update)
+* `DELETE /todos/:id` = delete the specified todo (Delete)
+
+HTTP status codes:
+* 200 OK
+* 300 (about the resource, hasn't changed, redirect here)
+* 400 user did something wrong
+* 500 something went wrong on our server

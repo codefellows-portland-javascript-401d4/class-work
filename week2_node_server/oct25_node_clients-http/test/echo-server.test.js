@@ -30,7 +30,7 @@ describe('echo server', () => {
             client = net.connect({ port: port }, err => {
                 if (err) done(err)
                 else {
-                    client.setEncoding = 'utf-8';
+                    client.setEncoding('utf-8');
                     done();
                 }
             });
@@ -57,8 +57,7 @@ describe('echo server', () => {
         });
 
         after(done => {
-            // undocumented node feature, client.end 
-            // takes a callback
+            // undocumented node feature, client.end takes a callback
 			client.end(done);
 		});
     });
