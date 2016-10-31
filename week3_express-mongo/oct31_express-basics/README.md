@@ -43,3 +43,9 @@ route matching, parameters, and order of routes
 	* views, routes, static
 	* express generator
 	* `express.Router()` (tomorrow)
+
+## Misc
+
+My crappy file-store db: 
+* [`bad-store` on npm](https://www.npmjs.com/package/bad-store) 
+* [repo on github](https://github.com/martypdx/bad-store) 
