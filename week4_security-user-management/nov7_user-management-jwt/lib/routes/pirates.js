@@ -12,8 +12,7 @@ router
         // (which will filter on pirates that have that rank)
         if(req.query.rank) query.rank = req.query.rank;
 
-        Pirate.find()
-            // .byWeapon('rubber chicken')
+        Pirate.find(query)
             .select('name rank crewId')
             .populate({
                 path: 'crewId',
@@ -37,7 +36,7 @@ router
     })
 
     .post('/', bodyParser, (req, res, next) => {
-        new Pirate(req.body).save()
+        new Pirate(req.body).save({ new: true })
             .then(saved => res.send(saved ))
             .catch(next);
     })

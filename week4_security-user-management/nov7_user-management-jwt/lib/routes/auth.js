@@ -16,6 +16,13 @@ router.post('/signup', jsonParser, (req, res, next) => {
 	// we have a reference, so remove from body
 	delete req.body.password;
 
+	if(!username || !password) {
+		return next({
+			code: 400,
+			error: 'username and password must be supplied'
+		});
+	}
+
 	// try and find user that already has this user name
 	User.find({ username }) // same as: { username: username }
 		.count()

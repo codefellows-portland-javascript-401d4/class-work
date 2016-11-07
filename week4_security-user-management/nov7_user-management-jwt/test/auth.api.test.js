@@ -11,28 +11,28 @@ const app = require( '../lib/app' );
 describe( 'auth', () => {
 
 	// you can drop the whole database (instead of one collection):
-	
-	// before( done => {
-	// 	const drop = () => connection.db.dropDatabase( done );
-	// 	if ( connection.readyState === 1 ) drop();
-	// 	else connection.on( 'open', drop );
-	// });
-
 	before( done => {
-		const CONNECTED = 1;
-		if (connection.readyState === CONNECTED) dropCollection();
-		else connection.on('open', dropCollection);
-
-		function dropCollection(){
-			const name = 'users';
-			connection.db
-				.listCollections({ name })
-				.next( (err, collinfo) => {
-					if (!collinfo) return done();
-					connection.db.dropCollection(name, done);
-				});
-		}
+		const drop = () => connection.db.dropDatabase( done );
+		if ( connection.readyState === 1 ) drop();
+		else connection.on( 'open', drop );
 	});
+
+	// use this to drop one collection:
+	// before( done => {
+	// 	const CONNECTED = 1;
+	// 	if (connection.readyState === CONNECTED) dropCollection();
+	// 	else connection.on('open', dropCollection);
+
+	// 	function dropCollection(){
+	// 		const name = 'users';
+	// 		connection.db
+	// 			.listCollections({ name })
+	// 			.next( (err, collinfo) => {
+	// 				if (!collinfo) return done();
+	// 				connection.db.dropCollection(name, done);
+	// 			});
+	// 	}
+	// });
 
 	const request = chai.request( app );
 
