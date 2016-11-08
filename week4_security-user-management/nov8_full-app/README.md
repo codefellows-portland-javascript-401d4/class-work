@@ -1,3 +1,2 @@
-![cf](http://i.imgur.com/7v5ASc8.png)  Full App Details
-===
-
+This repo was deployed to heroku, so it is 
+stand-alone repo located [here](https://github.com/martypdx/pirates-r-us)
