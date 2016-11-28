@@ -1,8 +1,6 @@
 
 var app = angular.module('myApp', []);
 
-app.directive('ngClick')
-
 let init = 10;
 app.controller('counterCtrl', function($scope) {
     $scope.count = init++;
