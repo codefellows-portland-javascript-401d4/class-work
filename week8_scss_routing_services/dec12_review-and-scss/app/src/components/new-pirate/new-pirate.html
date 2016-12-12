@@ -1,4 +1,4 @@
-<section ng-class="$ctrl.styles['pirate-class']">
+<section ng-class="$ctrl.styles.pirate">
     <div>
         <label>name:</label>
         <input ng-model="$ctrl.name">
@@ -7,5 +7,5 @@
         <label>rank:</label>
         <input ng-model="$ctrl.rank">
     </div>
-    <button ng-click="$ctrl.addNew()">add</button>
+    <button class="primary" ng-click="$ctrl.addNew()">add</button>
 </section>

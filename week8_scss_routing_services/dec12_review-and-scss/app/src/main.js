@@ -1,5 +1,5 @@
 import angular from 'angular';
-import './scss/main.css';
+import './scss/main.scss';
 // picks up index.js from components and services folder
 import components from './components';
 import services from './services';

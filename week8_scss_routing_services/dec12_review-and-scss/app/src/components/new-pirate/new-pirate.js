@@ -1,5 +1,5 @@
 import template from './new-pirate.html';
-import styles from  './new-pirate.css';
+import styles from  './new-pirate.scss';
 
 export default {
     template,
