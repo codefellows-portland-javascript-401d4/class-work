@@ -20,4 +20,6 @@
 * outlet via `ui-view`
     * `ui-sref='state'`
     * template v component
-* nested stated and parameters
+* parameters
+* nested state
+* named views
