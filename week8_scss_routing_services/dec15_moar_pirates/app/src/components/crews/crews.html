@@ -13,19 +13,19 @@
         </span> 
     </div>
     <section>
-    <ul>
-        <li ng-repeat="crew in $ctrl.crews"
-            ui-sref="crews.detail({ 
-                id: crew._id,
-                view: $ctrl.view
-            })">
+        <add-new fields="name, flag" add="$ctrl.add"></add-new>
+        <ul>
+            <li ng-repeat="crew in $ctrl.crews"
+                ui-sref="crews.detail({ 
+                    id: crew._id,
+                    view: $ctrl.view
+                })">
 
-            <h4>{{crew.name}}</h4>
-            <img ng-src="{{crew.flag}}">
+                <h4>{{crew.name}}</h4>
+                <img ng-src="{{crew.flag}}">
 
-        </li>
-    </ul>
-    <add-new fields="name, flag" add="$ctrl.add"></add-new>
+            </li>
+        </ul>
     </section>
 
     <ui-view>select a crew to see detail</ui-view>

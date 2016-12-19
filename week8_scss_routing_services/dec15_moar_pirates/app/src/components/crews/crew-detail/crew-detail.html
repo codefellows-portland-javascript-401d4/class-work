@@ -4,6 +4,7 @@
         <img ng-src="{{$ctrl.crew.flag}}">
     </div>
 
+    <h3>Pirates</h3>
     <ul ng-if="$ctrl.view === 'detail'">
         <li ng-repeat="pirate in $ctrl.crew.pirates">
             <pirate-detail pirate="pirate"></pirate-detail>

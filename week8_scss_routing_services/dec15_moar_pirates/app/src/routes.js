@@ -9,6 +9,12 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
+        name: 'example',
+        url: '/example',
+        component: 'example'
+    });
+
+    $stateProvider.state({
         name: 'crews.detail',
         // the url, plus implied params id and view
         url: '/:id?view',
