@@ -14,13 +14,13 @@ controller.$inject = ['albumService', '$state'];
 function controller(albumService, $state) {
     this.styles = styles;
 
-    this.$onInit = () => {
-        const albums = this.albums;
-        if(albums.length) {
-            this.selected = albums[0]._id;
-            this.setAlbum();
-        }
-    };
+    // this.$onInit = () => {
+    //     const albums = this.albums;
+    //     if(albums.length) {
+    //         this.selected = albums[0]._id;
+    //         this.setAlbum();
+    //     }
+    // };
 
     this.setAlbum = () => {
         if(!this.selected) return;
