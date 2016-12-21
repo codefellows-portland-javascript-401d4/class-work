@@ -1,43 +1,35 @@
+'use strict';
 
-describe('My Todo App', function() {
+var _welcomePage = require('./welcome-page');
 
-    it('should have a title', function() {
-        browser.get('/');
-        expect(browser.getTitle()).toEqual('Cute Image Albums');
+var _welcomePage2 = _interopRequireDefault(_welcomePage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+describe('My Todo App', function () {
+
+    var welcome = new _welcomePage2.default();
+
+    it('should have a title', function () {
+        welcome.get();
+        expect(welcome.title).toEqual('Cute Image Albums');
     });
-    
-    describe('navigation', function() {
 
-        beforeEach(function() {
-            // navigate to url (in this case baseUrl in protractor.conf.js)
-            browser.get('/');
+    describe('navigation', function () {
+
+        beforeEach(function () {
+            welcome.get();
         });
 
-        it('default to /', function() {
-            
-            // find the primary uiView
-            const uiView = element(by.css('main ui-view'));
+        it('default to welcome page, and navigate to gallery', function () {
 
-            function testState(url, componentName) {
-                // test the current browser url
-                expect(browser.getLocationAbsUrl()).toBe(url);
+            expect(welcome.url).toBe('/');
+            expect(welcome.stateComponent).toEqual('welcome');
 
-                // TODO: not happy with this verbose, inefficient way
-                // to get first child element. find a better way
-                const component = uiView.all(by.css('*')).first();
-                // test that it is our actual component
-                expect(component.getTagName()).toEqual(componentName);                
-            }
+            welcome.goToGallery();
 
-            testState('/', 'welcome');
-            
-            const nav = element.all(by.css('nav a'));
-            // const aWelcome = nav.get(0);
-            const aGallery = nav.get(1);
-            
-            aGallery.click();
-
-            testState('/albums', 'albums');
+            expect(welcome.url).toBe('/albums');
+            expect(welcome.stateComponent).toEqual('albums');
         });
     });
 });
