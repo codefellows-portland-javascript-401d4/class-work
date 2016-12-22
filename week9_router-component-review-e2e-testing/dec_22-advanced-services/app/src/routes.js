@@ -16,7 +16,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
         name: 'gallery',
         url: '/albums',
         resolve: {
-            albums: ['albumService', albums => albums.get()]
+            albums: ['albumService', Album => Album.query()]
         },
         component: 'albums' ,
         views: {
@@ -35,8 +35,8 @@ export default function routes($stateProvider, $urlRouterProvider) {
         abstract: true,
         default: '.thumbnail',
         resolve: {
-            album: ['albumService', '$transition$', (albums, t) => {
-                return albums.get(t.params().id);
+            album: ['albumService', '$transition$', (Album, t) => {
+                return Album.get({ id: t.params().id });
             }],
             // make images available to viewer components
             images: ['album', a => a.images]

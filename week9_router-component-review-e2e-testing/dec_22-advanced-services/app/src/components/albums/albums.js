@@ -11,7 +11,8 @@ export default {
 
 controller.$inject = ['albumService', '$state'];
 
-function controller(albumService, $state) {
+function controller(Album, $state) {
+    
     this.styles = styles;
 
     this.reset = () => {
@@ -26,7 +27,7 @@ function controller(albumService, $state) {
     };
 
     this.add = () => {
-        albumService.add(this.newAlbum)
+        new Album(this.newAlbum).$save()
             .then(album => {
                 this.albums.push(album);
                 this.reset();

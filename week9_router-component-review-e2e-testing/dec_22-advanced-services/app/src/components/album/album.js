@@ -4,23 +4,25 @@ import styles from './album.scss';
 export default {
     template,
     bindings: {
+        albums: '<',
         album: '<'
     },
     controller   
 };
 
-controller.$inject = ['imageService'];
+controller.$inject = ['imageService', '$state'];
 
-function controller(imageService) {
+function controller(imageService, $state) {
 
     this.styles = styles;
 
-    // this.setDisplay = name => {
-    //     const parts = $state.current.name.split('.');
-    //     parts[parts.length-1] = name;
-    //     const newState  = parts.join('.');
-    //     $state.go(newState, { foo: name });
-    // };
+    this.removeAlbum = () => {
+        this.album.$remove().then(() => {
+            const index = this.albums.indexOf(this.album);
+            if(index > -1) this.albums.splice(index, 1);
+            $state.go('albums');
+        });
+    };
 
     this.alert = () => {
         console.log('alert from album!');
