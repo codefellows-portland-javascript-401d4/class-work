@@ -1,5 +1,7 @@
+require('dotenv').load();
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const EnvironmentPlugin = require('webpack').EnvironmentPlugin;
 
 // create an output file to extract to via:
 const cssExtract = new ExtractTextPlugin('main.css');
@@ -16,6 +18,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
+        new EnvironmentPlugin(['API_URL']),
         cssExtract
     ],
     module: {

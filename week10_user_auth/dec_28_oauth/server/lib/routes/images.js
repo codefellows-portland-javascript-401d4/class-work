@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser').json();
 const Image = require('../models/image');
+const twitter = require('../twitter');
 
 router
     .get('/', (req, res, next) => {
@@ -43,6 +44,17 @@ router
     .put('/:id', bodyParser, (req, res, next) => {
         Image.findByIdAndUpdate(req.params.id, req.body)
             .then(saved => res.send(saved))
+            .catch(next);
+    })
+
+    .post('/:id/tweets', bodyParser, (req, res, next) => {
+        Image.findById(req.params.id)
+            .then(image => {
+                if(!image) throw new Error({ code: 404 });
+                const status = `Isn't "${image.title}" cute? ${image.url}`
+                return twitter.postTweet(req.user.id, status);
+            })
+            .then(data => res.send(data))
             .catch(next);
     });
 

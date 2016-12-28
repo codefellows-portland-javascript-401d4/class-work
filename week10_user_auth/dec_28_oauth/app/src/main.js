@@ -47,9 +47,16 @@ app.filter('titleCase', function() {
     };
 });
 
-app.constant('apiUrl', process.env.API_URL || 'http://localhost:3000/api');
+// change to .constant from .value because we
+// need the apiUrl in the OAuth .config call
+app.constant('apiUrl', process.env.API_URL || '/api');
 
+// http interceptor for token goodness
 app.config(http);
+// ui-router setup:
 app.config(routes);
+// satellizer setup for oauth
 app.config(oauth);
+
+// state change event hook to check for auth:
 app.run(auth);
