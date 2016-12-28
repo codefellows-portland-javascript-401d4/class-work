@@ -4,7 +4,8 @@ import styles from './albums.scss';
 export default {
     template,
     bindings: {
-        albums: '<'
+        albums: '<',
+        selected: '='
     },
     controller
 };
@@ -14,12 +15,19 @@ controller.$inject = ['albumService', '$state'];
 function controller(Album, $state) {
     
     this.styles = styles;
-
-    this.reset = () => {
-        this.newAlbum = {};
+    this.reset = () => this.newAlbum = {};
+    this.$onInit = () => {
+        if(!this.selected && this.albums.length) {
+            this.selected = this.albums[0]._id;
+        }
+        this.setAlbum();
     };
-
     this.reset();
+
+    this.uiOnParamsChanged = params => {
+        console.log(params);
+        if(params.id) this.selected = params.id;
+    };
 
     this.setAlbum = () => {
         if(!this.selected) return;

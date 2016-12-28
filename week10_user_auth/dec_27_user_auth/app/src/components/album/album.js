@@ -18,14 +18,11 @@ function controller(imageService, $state) {
 
     this.removeAlbum = () => {
         this.album.$remove().then(() => {
-            const index = this.albums.indexOf(this.album);
+            const _id = this.album._id;
+            const index = this.albums.findIndex(a => a._id === _id);
             if(index > -1) this.albums.splice(index, 1);
-            $state.go('albums');
+            $state.go('gallery');
         });
-    };
-
-    this.alert = () => {
-        console.log('alert from album!');
     };
 
     this.reset = () => {

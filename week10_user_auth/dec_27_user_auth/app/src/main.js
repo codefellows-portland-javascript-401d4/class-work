@@ -7,9 +7,12 @@ import services from './services';
 // bring in 3rd party modules
 import animate from 'angular-animate';
 import uiRouter from 'angular-ui-router';
-// plugin for "default" routes
 import defaultRoute from 'angular-ui-router-default';
-// need this for old $stateChanged events;
+
+// need this for old $stateChanged events,
+// however, we need to manually grab the module 
+// from angular (see below) as it is not 
+// exported from this import 
 import 'angular-ui-router/release/stateEvents';
 
 import resource from 'angular-resource';
@@ -28,8 +31,8 @@ const app = angular.module('myApp', [
     services,
     animate,
     uiRouter,
-    angular.module('ui.router.state.events').name,
     defaultRoute,
+    angular.module('ui.router.state.events').name,
     resource,
     dialog
 ]);

@@ -5,9 +5,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: 'welcome',
         url: '/',
-        data: {
-            public: true
-        },
+        data: { public: true },
         views: {
             main: {
                 component: 'welcome' 
@@ -18,10 +16,14 @@ export default function routes($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: 'gallery',
         url: '/albums',
-        resolve: {
-            albums: ['albumService', Album => Album.query()]
+        params: {
+            selected: { dynamic: true }
         },
-        component: 'albums' ,
+        resolve: {
+            albums: ['albumService', Album => Album.query().$promise],
+            selected: ['$transition$', t => t.params().id]
+        },
+        component: 'albums',
         views: {
             header: {
                 component: 'albumsHeader'
@@ -38,13 +40,12 @@ export default function routes($stateProvider, $urlRouterProvider) {
         abstract: true,
         default: '.thumbnail',
         resolve: {
+            id: ['$transition$', t => t.params().id],
             album: ['albumService', '$transition$', (Album, t) => {
-                return Album.get({ id: t.params().id });
+                return Album.get({ id: t.params().id }).$promise;
             }],
             // make images available to viewer components
-            images: ['album', a => {
-                return a.$promise.then(a => a.images);
-            }]
+            images: ['album', a => a.images]
         },
         component: 'album' 
     });
