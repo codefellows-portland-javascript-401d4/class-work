@@ -123,8 +123,8 @@ Probably Agenda:
         * After - a chore to check a box with no value
         * Manual testing is still testing
         * Be judiscious
-
+* Grow, don't Birth
 
 ## `angular-animate`
 
-* http://www.nganimate.org/angularjs/tutorial/how-to-make-animations-with-angularjs
+* [awesome tutorial](http://www.nganimate.org/angularjs/tutorial/how-to-make-animations-with-angularjs)

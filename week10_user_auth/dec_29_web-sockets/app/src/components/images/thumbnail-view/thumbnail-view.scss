@@ -16,8 +16,7 @@
         box-sizing: border-box;
 
         opacity: 1;
-        -webkit-transition: 1s;
-        transition: opacity 1s;
+        transition: opacity 1s ease-in-out;
 
         &.ng-enter, &.ng-leave-active {
             opacity: 0;
